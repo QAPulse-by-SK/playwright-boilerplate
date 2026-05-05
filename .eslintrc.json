@@ -1,23 +1,22 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "playwright"],
+  "plugins": ["playwright"],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:playwright/recommended"
   ],
   "env": {
     "node": true,
     "es2020": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "warn",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "playwright/expect-expect": "error",
     "playwright/no-skipped-test": "warn",
     "playwright/no-focused-test": "error"
   },
-  "ignorePatterns": ["node_modules/", "dist/", "playwright-report/"]
+  "ignorePatterns": ["node_modules/", "playwright-report/", "allure-results/"]
 }
