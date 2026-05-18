@@ -31,3 +31,4 @@ tests/visual/**/*.png
 
 # Coverage
 coverage/
+qapulse-report/
